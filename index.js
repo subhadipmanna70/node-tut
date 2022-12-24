@@ -1,18 +1,7 @@
-const colors=require('colors');
-console.log("hello".green);
-const http = require('http');
-
-// const dataControl=(req,resp)=>
-// {
-//     resp.write("<h1>i am joddd.</h1>");
-//     resp.end();
-
-// }
-
-
-http.createServer((req,resp)=>
-{
-    resp.write("<h1>i am joddd.</h1>");
+const http=require('http');
+const data=require('./data')
+http.createServer((req,resp)=>{
+    resp.writeHead(200,{'Content-Type':'application\json'});
+    resp.write(JSON.stringify(data));
     resp.end();
-
-}).listen(4500);
+}).listen(5000);
