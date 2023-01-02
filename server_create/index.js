@@ -1,3 +1,6 @@
+
+     // server create
+
 const http=require('http');
 const data=require('./data')
 http.createServer((req,resp)=>{
